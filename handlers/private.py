@@ -8,21 +8,21 @@ from helpers.filters import command, other_filters2
 @Client.on_message(command(["start", f"start@{BOT_USERNAME}"]))
 async def start(_, message: Message):
                 await message.reply_photo(
-                "https://te.legra.ph/file/a319a2bfa9fc25a8d51af.jpg",
+                "https://te.legra.ph/file/0a4f06f27de1ae61784fa.jpg",
                 caption=(f"""**Salam {message.from_user.mention} 🎵\nMən {bot}!\nSəsli söhbətlərdə musiqi oxuyan botam. Ban yetkisiz, Səs yetkisi verib, Asistanı qrupa əlavə edin.\n\nSahibim👉  [HOZU](https://t.me/Dakanca_Hozu)**"""),
          reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/CrazyMusiqiBot?startgroup=true"
+                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/ASOMusicBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/Crazyasistant"
+                        "🔊 Asistan", url="https://t.me/ASOmusic_asisstan"
                     ),
                     InlineKeyboardButton(
-                        "Support 💬", url="https://t.me/Crazysup"
+                        "Əyləncə 💬", url="https://t.me/WerabliAnlar"
                     )
                 ],
                 [
@@ -30,7 +30,7 @@ async def start(_, message: Message):
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/crazy_resmi"
+                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/ASOresmi"
                     )
                 ]
                 
@@ -56,7 +56,7 @@ async def bilgi(_, message: Message):
                          "Geri 🔄", callback_data="cbstart")
                  ],[
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/Dakanca_Hozu")
+                         "Owner 🇦🇿", url="https://t.me/ismiyev95")
                  ]
              ]
          )
@@ -82,7 +82,7 @@ async def cbbilgi(_, query: CallbackQuery):
         ],
         [
           InlineKeyboardButton(
-            "Sahib 🇦🇿", url="https://t.me/Dakanca_Hozu")
+            "Owner 🇦🇿", url="https://t.me/ismiyev95")
         ]
       ]
      ))
@@ -95,7 +95,7 @@ async def herkes(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/Dakanca_Hozu")
+                         "Owner 🇦🇿", url="https://t.me/ismiyev95")
                  ],
                  [
                      InlineKeyboardButton(
@@ -113,7 +113,7 @@ async def admin(_, query: CallbackQuery):
              [
                  [
                      InlineKeyboardButton(
-                         "Sahib 🇦🇿", url="https://t.me/Dakanca_Hozu")
+                         "Owner 🇦🇿", url="https://t.me/ismiyev95")
                  ],
                  [
                      InlineKeyboardButton(
@@ -131,15 +131,15 @@ async def cbstart(_, query: CallbackQuery):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/CrazyMusiqiBot?startgroup=true"
+                        "➕ ❰ Məni Qrupa Əlavə Et ❱ ➕", url=f"https://t.me/ASOMusicBot?startgroup=true"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🔊 Asistan", url="https://t.me/Crazyasistant"
+                        "🔊 Asistan", url="https://t.me/ASOmusic_asisstan"
                     ),
                     InlineKeyboardButton(
-                        "Support 💬", url="https://t.me/Crazysup"
+                        "Əyləncə 💬", url="https://t.me/WerabliAnlar"
                     )
                 ],
                 [
@@ -147,7 +147,7 @@ async def cbstart(_, query: CallbackQuery):
                         "🧩 Əmrlər" , callback_data= "cbbilgi"
                     ),
                     InlineKeyboardButton(
-                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/crazy_resmi"
+                        "Rəsmi Kanal 🇦🇿", url=f"https://t.me/ASOresmi"
                     )
                 ]
                 
