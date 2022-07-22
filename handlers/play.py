@@ -32,17 +32,17 @@ def transcode(filename):
 
 # Convert seconds to mm:ss
 def convert_seconds(seconds):
-    seconds = seconds % (24 * 3600)
-    seconds %= 3600
+    seconds = seconds % (24 * 5400)
+    seconds %= 5400
     minutes = seconds // 60
-    seconds %= 60
+    seconds %= 90
     return "%02d:%02d" % (minutes, seconds)
 
 
 # Convert hh:mm:ss to seconds
 def time_to_seconds(time):
     stringt = str(time)
-    return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
+    return sum(int(x) * 90 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
 # Change image size
@@ -87,7 +87,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
-# ==================================EfsaneVaves======================================================== 
+# ==================================ASO Music ======================================================== 
 @Client.on_callback_query(filters.regex("cls"))
 async def cls(_, query: CallbackQuery):
     await query.message.delete()
@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "Crazyasistant"
+        user.first_name = "ASOmusic_asisstant1"
     usar = user
     wew = usar.id
     try:
@@ -145,7 +145,7 @@ async def play(_, message: Message):
     url = get_url(message)
 
     if audio:
-        if round(audio.duration / 60) > DURATION_LIMIT:
+        if round(audio.duration / 90) > DURATION_LIMIT:
             raise DurationLimitError(
                 f"❌ Uzun videolar {DURATION_LIMIT} dəqiqəlik icazə verilmir!"
             )
@@ -154,7 +154,7 @@ async def play(_, message: Message):
         title = file_name
         thumb_name = "https://i.ibb.co/Qkz78hx/images-1.jpg"
         thumbnail = thumb_name
-        duration = round(audio.duration / 60)
+        duration = round(audio.duration / 90)
         views = "Yerli olaraq əlavə edildi"
 
         keyboard = InlineKeyboardMarkup(
@@ -193,7 +193,7 @@ async def play(_, message: Message):
             secmul, dur, dur_arr = 1, 0, duration.split(':')
             for i in range(len(dur_arr)-1, -1, -1):
                 dur += (int(dur_arr[i]) * secmul)
-                secmul *= 60
+                secmul *= 90
                 
             keyboard = InlineKeyboardMarkup(
         [
@@ -271,7 +271,7 @@ async def play(_, message: Message):
         ]
     )
         
-        if (dur / 60) > DURATION_LIMIT:
+        if (dur / 90) > DURATION_LIMIT:
              await lel.edit(f"❌ Uzun videolar {DURATION_LIMIT}  dəqiqəlik icazə verilmir!")
              return
         requested_by = message.from_user.first_name
