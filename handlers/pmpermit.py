@@ -18,7 +18,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Salam 🗣, Musiqi asistanı xidmətidir.botla bağlı @WerabliAnlar\n\n ❗️ qaydalar:\n - Sohbete icazə yoxdu.\n - məlumat ve Menyularım üçün qrubun sohbetinde **/bilgi** yazsanız. (Asistan sohbetinə bilgi yazmayın.) Musiqi menyularını öyrənə bilərsiniz. \n - İstənməyən postaya icazə verilmez \n\n 🚨 **Userbot Qrupunuza Qoşulmursa >> DƏVƏT QOŞULMA ÖZƏLLİYİ VE SƏS YÖNƏTİMİ ÖZƏLLİKLƏRİ VER YÖNETİCİ EDİN. <<**\n\n ⚠️ DİQQƏT: Burada bir mesaj göndərsəniz. Yöneticinin iletinizi göreceyi anlamına gəlir.\n - Şəxsi bilgiləri burada paylaşmayın. (Musiqi Botunu Xaiş Edirik Gizli Qrublara almayın.) 📚 Bilgi üçün [Sahibim 🧩](https://t.me/ismiyev95) 🇹🇷\n",
+                "Salam 🗣, Musiqi asistanı xidmətidir.botla bağlı @WerabliAnlar\n\n ❗️ qaydalar:\n - Sohbete icazə yoxdu.\n - məlumat ve Menyularım üçün qrubun sohbetinde **/bilgi** yazsanız. (Asistan sohbetinə bilgi yazmayın.) Musiqi menyularını öyrənə bilərsiniz. \n - İstənməyən postaya icazə verilmez \n\n 🚨 **Userbot Qrupunuza Qoşulmursa >> DƏVƏT QOŞULMA ÖZƏLLİYİ VE SƏS YÖNƏTİMİ ÖZƏLLİKLƏRİ VER YÖNETİCİ EDİN. <<**\n\n ⚠️ DİQQƏT: Burada bir mesaj göndərsəniz. Yöneticinin iletinizi göreceyi anlamına gəlir.\n - Şəxsi bilgiləri burada paylaşmayın. (Musiqi Botunu Xaiş Edirik Gizli Qrublara almayın.) 📚 Bilgi üçün [Sahibim 👨🏻‍💻](https://t.me/ismiyev95) 🇦🇿\n",
             )
             return
  
