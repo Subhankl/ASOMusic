@@ -34,7 +34,7 @@ def transcode(filename):
 def convert_seconds(seconds):
     seconds = seconds % (24 * 5400)
     seconds %= 5400
-    minutes = seconds // 60
+    minutes = seconds // 90
     seconds %= 90
     return "%02d:%02d" % (minutes, seconds)
 
@@ -133,7 +133,7 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>🔵 Taşan Gözləmə xətası 🔵</b> \n\Salam {user.first_name}, Faydalı userbot çoxlu qoşulma sorğularına görə qrupunuza qoşula bilmədi. Userbot-un qrupda qadağan edilmədiyinə əmin olun və sonra yenidən cəhd edin!")
+                        f"<b>🔵 dayanın Gözləmə xətası 🔵</b> \n\Salam {user.first_name}, Faydalı userbot çoxlu qoşulma sorğularına görə qrupunuza qoşula bilmədi. Userbot-un qrupda qadağan edilmədiyinə əmin olun və sonra yenidən cəhd edin!")
     try:
         await USER.get_chat(chid)
     except:
@@ -220,7 +220,7 @@ async def play(_, message: Message):
                         ]
                     ]
                 )
-        if (dur / 60) > DURATION_LIMIT:
+        if (dur / 90) > DURATION_LIMIT:
              await lel.edit(f"❌ Uzun videolar {DURATION_LIMIT} dəqiqəlik ucazə verilmir!")
              return
         requested_by = message.from_user.first_name
@@ -228,7 +228,7 @@ async def play(_, message: Message):
         file_path = await converter.convert(youtube.download(url))
     else:
         if len(message.command) < 2:
-            return await lel.edit("🤔 **Dinləmək istədiyin mahnı nədir?**")
+            return await lel.edit("🤔 **Dinləmək istədiyin mahnı nədir? @WerabliAnlar**")
         await lel.edit("🔎 **Zəhmət olmasa Gözləyin...**")
         query = message.text.split(None, 1)[1]
         # print(query)
@@ -255,7 +255,7 @@ async def play(_, message: Message):
                 
         except Exception as e:
             await lel.edit(
-                "❌ Mahnı tapılmadı\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil"
+                "❌ Mahnı tapılmadı\n\nBaşqa mahnı yoxlayın və ya mahnı adı düzgün deyil @ASOresmi 🇦🇿"
             )
             print(str(e))
             return
